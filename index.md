@@ -7,3 +7,6 @@ The authors notice that node density increases when moving from the periphery to
 # Lab #1 - Models of Urban Structure in QGIS (9/12/2019)
 ### Distance & Direction from Central Business District (CBD) Model
 This week, we constructed a model in QGIS to illustrate Homer Hoyt's model of urban structure. The model can be downloaded [**here**](https://marcovg.github.io/DistanceAndDirectionFromPoint.model3). This algorithm calculates the distance (in meters) and direction (in degrees) of a set of input features from the mean coordinates of the centroids of a user-specified feature class. This algorithm could theoretically be applied if the user is seeking to analyze how distance and direction from a "central business district" affect trends and patterns across space in an urban environment.
+
+# Practical #1 - QGIS Modelling (9/25/2019)
+### Manchester, NH Case Study
