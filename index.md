@@ -10,7 +10,8 @@ This week, we constructed a model in QGIS to illustrate Homer Hoyt's model of ur
 
 # Practical #1 - QGIS Modelling (9/25/2019)
 ### Manchester, NH Case Study
-
+I updated the model this week to include a SQL Query that calculates the distance field, in place of a Field Calculator operation.
 #### Median Gross Rent
-
+![Manchester, NH Median Gross Rent](https://marcovg.github.io/ManchesterRent.png)
 #### Percent Hispanic
+![Manchester, NH Percent Hispanic](https://marcovg.github.io/ManchesterHispanic.png)
