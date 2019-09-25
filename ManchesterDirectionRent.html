@@ -1,0 +1,131 @@
+<head><meta charset="utf-8" /><script src="https://cdn.plot.ly/plotly-1.34.0.min.js"></script></head><div id="63c92812-0466-460d-bc7a-279d66e496be" style="height: 100%; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("63c92812-0466-460d-bc7a-279d66e496be", [{"line": {"color": "rgb(142, 186, 217)", "dash": "solid", "width": 1}, "marker": {"color": "rgb(142, 186, 217)", "line": {"color": "rgb(31, 119, 180)", "width": 1}, "size": 10, "symbol": 0}, "mode": "markers", "name": "MedGrossRe", "opacity": 1.0, "r": [1183, 913, 1065, 1007, 924, 1109, 1032, 1055, 828, 1067, 1222, 898, 1256, 973, 981, 950, 1118, 1366, 1039, 1304, 973, 1080, 1094, 1046, 1479, 1169, 1188, 1004, 1234, 1345, 1029, 1626, 998, 869, 1645, 1023, 1034, 1595], "theta": [0.31442353920668514, 22.898340782227528, 292.632488958932, 278.4155385647391, 87.56530370440751, 217.9127479792076, 120.19238266711378, 71.14888733257703, 127.75548029697504, 14.097200289228663, 73.62533708093969, 276.9046007768151, 334.7574341572613, 92.28059695677273, 106.64091857535335, 217.17647203901709, 133.91285557971108, 132.727445407668, 59.90489842816693, 103.83005859228878, 110.33251031161747, 121.33344767422349, 162.73772364879162, 172.04165282069155, 141.3988710556827, 47.03149110428109, 321.24181458905514, 297.3304618010221, 273.56969723066186, 32.3090701993167, 250.60914051329542, 352.6391313770794, 46.47703614270396, 90.88231041242038, 200.74772861291368, 104.87397063353512, 259.40999069227746, 248.87005822644122], "type": "scatterpolar", "uid": "b1b33582-df8c-11e9-8bf7-e4b97af7ac7d"}], {"legend": {"orientation": "v"}, "polar": {"angularaxis": {"direction": "clockwise"}}, "showlegend": true, "title": "Median Gross Rent by Census Tract Direction (Manchester, NH)", "xaxis": {"autorange": true, "title": "Direction", "type": "linear"}, "yaxis": {"autorange": true, "title": "Median Gross Rent ($)", "type": "linear"}}, {"editable": true, "scrollZoom": true, "showLink": false, "linkText": "Export to plot.ly"})</script>
+        <script>
+        // additional js function to select and click on the data
+        // returns the ids of the selected/clicked feature
+
+        var plotly_div = document.getElementById('63c92812-0466-460d-bc7a-279d66e496be')
+        var plotly_data = plotly_div.data
+
+        // selecting function
+        plotly_div.on('plotly_selected', function(data){
+        var dds = {};
+        dds["mode"] = 'selection'
+        dds["type"] = data.points[0].data.type
+
+        featureIds = [];
+        featureIdsTernary = [];
+
+        data.points.forEach(function(pt){
+        featureIds.push(parseInt(pt.id))
+        featureIdsTernary.push(parseInt(pt.pointNumber))
+        dds["id"] = featureIds
+        dds["tid"] = featureIdsTernary
+            })
+        //console.log(dds)
+        window.status = JSON.stringify(dds)
+        })
+
+        // clicking function
+        plotly_div.on('plotly_click', function(data){
+        var featureIds = [];
+        var dd = {};
+        dd["fidd"] = data.points[0].id
+        dd["mode"] = 'clicking'
+
+        // loop and create dictionary depending on plot type
+        for(var i=0; i < data.points.length; i++){
+
+        // scatter plot
+        if(data.points[i].data.type == 'scatter'){
+            dd["uid"] = data.points[i].data.uid
+            dd["type"] = data.points[i].data.type
+
+            data.points.forEach(function(pt){
+            dd["fid"] = pt.id
+            })
+        }
+
+        // pie
+
+        else if(data.points[i].data.type == 'pie'){
+          dd["type"] = data.points[i].data.type
+          dd["label"] = data.points[i].label
+          dd["field"] = data.points[i].data.name
+          console.log(data.points[i].label)
+          console.log(data.points[i])
+        }
+
+        // histogram
+        else if(data.points[i].data.type == 'histogram'){
+            dd["type"] = data.points[i].data.type
+            dd["uid"] = data.points[i].data.uid
+            dd["field"] = data.points[i].data.name
+
+            // correct axis orientation
+            if(data.points[i].data.orientation == 'v'){
+                dd["id"] = data.points[i].x
+                dd["bin_step"] = data.points[i].data.xbins.size
+            }
+            else {
+                dd["id"] = data.points[i].y
+                dd["bin_step"] = data.points[i].data.ybins.size
+            }
+        }
+
+        // box plot
+        else if(data.points[i].data.type == 'box'){
+            dd["uid"] = data.points[i].data.uid
+            dd["type"] = data.points[i].data.type
+            dd["field"] = data.points[i].data.customdata[0]
+
+                // correct axis orientation
+                if(data.points[i].data.orientation == 'v'){
+                    dd["id"] = data.points[i].x
+                }
+                else {
+                    dd["id"] = data.points[i].y
+                }
+            }
+
+        // violin plot
+        else if(data.points[i].data.type == 'violin'){
+            dd["uid"] = data.points[i].data.uid
+            dd["type"] = data.points[i].data.type
+            dd["field"] = data.points[i].data.customdata[0]
+
+                // correct axis orientation (for violin is viceversa)
+                if(data.points[i].data.orientation == 'v'){
+                    dd["id"] = data.points[i].x
+                }
+                else {
+                    dd["id"] = data.points[i].y
+                }
+            }
+
+        // bar plot
+        else if(data.points[i].data.type == 'bar'){
+            dd["uid"] = data.points[i].data.uid
+            dd["type"] = data.points[i].data.type
+            dd["field"] = data.points[i].data.customdata
+
+                // correct axis orientation
+                if(data.points[i].data.orientation == 'v'){
+                    dd["id"] = data.points[i].x
+                }
+                else {
+                    dd["id"] = data.points[i].y
+                }
+            }
+
+        // ternary
+        else if(data.points[i].data.type == 'scatterternary'){
+            dd["uid"] = data.points[i].data.uid
+            dd["type"] = data.points[i].data.type
+            dd["field"] = data.points[i].data.customdata
+            dd["fid"] = data.points[i].pointNumber
+            }
+
+            }
+        window.status = JSON.stringify(dd)
+        });
+        </script>
