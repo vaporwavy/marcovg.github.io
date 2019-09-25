@@ -14,4 +14,4 @@ I updated the model this week to include a SQL Query that calculates the distanc
 #### Median Gross Rent
 ![Manchester, NH Median Gross Rent](https://marcovg.github.io/ManchesterRent.png)
 #### Percent Hispanic
-![Manchester, NH Percent Hispanic](https://marcovg.github.io/ManchesterHispanic.png)
+![Manchester, NH Percent Hispanic](https://marcovg.github.io/ManchesterHispanic.svg)
