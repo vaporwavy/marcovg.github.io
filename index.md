@@ -13,6 +13,6 @@ This week, we constructed a model in QGIS to illustrate Homer Hoyt's model of ur
 I updated the model this week to include a SQL Query that calculates the distance field, in place of a Field Calculator operation.
 #### Median Gross Rent 
 ![Manchester, NH Median Gross Rent](https://marcovg.github.io/ManchesterRent.png)
-[**This scatter plot**](https://marcovg.github.io/ManchesterDistanceRent.html) shows median gross rent in Manchester by distance, and [**this polar plot**](https://marcovg.github.io/ManchesterDirectionRent.html) shows the same measure by direction from downtown.
+[**This scatter plot**](https://marcovg.github.io/ManchesterDistanceRent.html) shows median gross rent in Manchester by distance, and [**this polar plot**](https://marcovg.github.io/ManchesterDirectionRent.html) shows the same measure by direction from downtown. The highest rents in the area are in Bedford (to the southwest), Hooksett (to the north), and Londonderry (to the southeast). Downtown Manchester, along with rural towns that aren't along the Merrimack River (Auburn to the east, Goffstown to the west) have the lowest median gross rent. These suburban tracts tend to be located between 6,000m and 9,000m (3.7mi to 5.6mi) from the city center.
 #### Percent Hispanic
 ![Manchester, NH Percent Hispanic](https://marcovg.github.io/ManchesterHispanic.png)
