@@ -10,3 +10,7 @@ This week, we constructed a model in QGIS to illustrate Homer Hoyt's model of ur
 
 # Practical #1 - QGIS Modelling (9/25/2019)
 ### Manchester, NH Case Study
+
+#### Median Gross Rent
+
+#### Percent Hispanic
