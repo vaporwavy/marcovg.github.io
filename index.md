@@ -19,3 +19,11 @@ Open source GIS was used throughout this lab and demonstrates Rey's (2009) asser
 #### Percent Hispanic
 ![Manchester, NH Percent Hispanic](https://marcovg.github.io/ManchesterHispanic.png)
 [**This scatter plot**](https://marcovg.github.io/ManchesterDistanceHispanic.html) shows the percentage of the population identifying as Hispanic in Manchester tracts by distance from downtown, and [**this polar plot**](https://marcovg.github.io/ManchesterDirectionHispanic.html) shows the same measure by direction of the tract from downtown. There is no evident pattern of Hispanic distribution by distance, though some concentrations can be found in particular directions. The city's largest concentrations of Hispanic populations lie to the northeast (Manchester's North End neighborhood), southwest (Piscataquog neighborhood), and southeast (Hallsville & Kalivas Union neighborhoods). The outlying suburbs, in contrast, have the lowest percentage of Hispanics in the metro area.
+
+# Lab #3 - Global Digital Elevation Models
+### ASTER Global DEMs of Mt. Kilimanjaro (Made with SAGA)
+#### Projected ASTER DEM
+#### Analytical Hillshading
+#### Sink Route
+#### Sink Removal
+#### Channel Network
