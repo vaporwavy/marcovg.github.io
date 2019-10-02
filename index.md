@@ -22,17 +22,22 @@ Open source GIS was used throughout this lab and demonstrates Rey's (2009) asser
 
 # Lab #3 - Global Digital Elevation Models
 ### ASTER Global DEMs of Mt. Kilimanjaro (Made with SAGA)
-During this week's lab, we worked in SAGA GIS.
+During this week's lab, we worked with Digital Elevation Models (DEMs) in SAGA GIS to construct various terrain and hydrological models. The following maps showcase SAGA's various analytical tools using an ASTER DEM for the area around Mt. Kilimanjaro in Tanzania.
 #### Projected ASTER DEM
 ![ASTER DEM](https://marcovg.github.io/Lab3_ProjectedAsterDEM.png)
+This is a map of the ASTER DEM, projected to Zone 37S UTM. The map shows elevation and units are in meters.
 #### Analytical Hillshading
 ![Analytical Hillshading](https://marcovg.github.io/Lab3_Hillshade225a30h.png)
+This is a map simulating light reflection based off of the DEM elevation map. Units are in radians, and the parameters for this hillshade are: Azimuth=225, Height=30, Exaggeration=1.
 #### Sink Route
 ![Sink Route](https://marcovg.github.io/Lab3_SinkRoute.png)
+This map indicates the direction in which water flows when it encounters a "sink" in the terrain.
 #### Sink Removal
 ![Sink Removal](https://marcovg.github.io/Lab3_SinkRemoval.png)
+This map constructs a new elevation model that reflects a scenario in which terrain "sinks" are filled, which assists us with the forthcoming hydrological analyses.
 #### Flow Accumulation
 ![Flow Accumulation](https://marcovg.github.io/Lab3_FlowAccumulation.png)
+This map indicates the number of cells that contribute to the flow of water in a given cell (e.g. value of 1 means no cells contribute, while a value of 100 means 99 other cells contribute). This allows us to identify streams.
 #### Channel Network
 ![Channel Network](https://marcovg.github.io/Lab3_ChannelNetwork.png)
-
+This map shows the stream networks in the area of Mt. Kilimanjaro. The output produces a vector and raster version, though this map only shows the vector output atop a hillshade (Azimuth=315, Heihgt=45, Exaggeration=1).
