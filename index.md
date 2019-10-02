@@ -22,8 +22,17 @@ Open source GIS was used throughout this lab and demonstrates Rey's (2009) asser
 
 # Lab #3 - Global Digital Elevation Models
 ### ASTER Global DEMs of Mt. Kilimanjaro (Made with SAGA)
+During this week's lab, we worked in SAGA GIS.
 #### Projected ASTER DEM
+![ASTER DEM](https://marcovg.github.io/Lab3_ProjectedAsterDEM.png)
 #### Analytical Hillshading
+![Analytical Hillshading](https://marcovg.github.io/Lab3_Hillshade225a30h.png)
 #### Sink Route
+![Sink Route](https://marcovg.github.io/Lab3_SinkRoute.png)
 #### Sink Removal
+![Sink Removal](https://marcovg.github.io/Lab3_SinkRemoval.png)
+#### Flow Accumulation
+![Flow Accumulation](https://marcovg.github.io/Lab3_FlowAccumulation.png)
 #### Channel Network
+![Channel Network](https://marcovg.github.io/Lab3_ChannelNetwork.png)
+
