@@ -48,7 +48,9 @@ During this week's lab, we learned how to develop batch scripts to run multiple 
 
 References:
 [**ASTER NUM Documentation**](https://lpdaac.usgs.gov/products/astgtmv003/)
+
 [**SRTM NUM Documentation**](https://lpdaac.usgs.gov/products/srtmgl1nv003/)
+
 [**Rodríguez, Morris, & Belz SRTM Assessment**](https://www.ingentaconnect.com/contentone/asprs/pers/2006/00000072/00000003/art00002?crawler=true&mimetype=application/pdf)
 
 #### SRTM NUM Return
