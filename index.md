@@ -8,7 +8,7 @@ The authors notice that node density increases when moving from the periphery to
 ### Distance & Direction from Central Business District (CBD) Model
 This week, we constructed a model in QGIS to illustrate Homer Hoyt's model of urban structure. The model can be downloaded [**here**](https://marcovg.github.io/DistanceAndDirectionFromPoint.model3). This algorithm calculates the distance (in meters) and direction (in degrees) of a set of input features from the mean coordinates of the centroids of a user-specified feature class. This algorithm could theoretically be applied if the user is seeking to analyze how distance and direction from a "central business district" affect trends and patterns across space in an urban environment.
 
-# Practical #1 - QGIS Modelling (9/25/2019)
+# Lab #2 - QGIS Modelling (9/19/2019)
 ### Manchester, NH Case Study
 I updated [**the model**](https://marcovg.github.io/DistanceAndDirectionFromPoint.model3) this week to include a SQL Query that calculates the distance field, in place of a Field Calculator operation. The new model takes a shapefile (of any geometry) as the central business district, calculates the centroid, and identifies each tract's geodesic distance (in meters) and direction (in degrees) from the city center. Sample data to demonstrate the model's applicability were drawn from the U.S. Census FactFinder (2017 ACS 5-Year Estimates) and joined to census tracts.
 
@@ -20,7 +20,7 @@ Open source GIS was used throughout this lab and demonstrates Rey's (2009) asser
 ![Manchester, NH Percent Hispanic](https://marcovg.github.io/ManchesterHispanic.png)
 [**This scatter plot**](https://marcovg.github.io/ManchesterDistanceHispanic.html) shows the percentage of the population identifying as Hispanic in Manchester tracts by distance from downtown, and [**this polar plot**](https://marcovg.github.io/ManchesterDirectionHispanic.html) shows the same measure by direction of the tract from downtown. There is no evident pattern of Hispanic distribution by distance, though some concentrations can be found in particular directions. The city's largest concentrations of Hispanic populations lie to the northeast (Manchester's North End neighborhood), southwest (Piscataquog neighborhood), and southeast (Hallsville & Kalivas Union neighborhoods). The outlying suburbs, in contrast, have the lowest percentage of Hispanics in the metro area.
 
-# Lab #3 - Global Digital Elevation Models
+# Lab #3 - Global Digital Elevation Models (9/26/2019)
 ### ASTER Global DEMs of Mt. Kilimanjaro (Made with SAGA)
 During this week's lab, we worked with Digital Elevation Models (DEMs) in SAGA GIS to construct various terrain and hydrological models. The following maps showcase SAGA's various analytical tools using an ASTER DEM for the area around Mt. Kilimanjaro in Tanzania.
 #### Projected ASTER DEM
@@ -42,7 +42,7 @@ This map indicates the number of cells that contribute to the flow of water in a
 ![Channel Network](https://marcovg.github.io/Lab3_ChannelNetwork.png)
 This map shows the stream networks in the area of Mt. Kilimanjaro. The output produces a vector and raster version, though this map only shows the vector output atop a hillshade (Azimuth=315, Heihgt=45, Exaggeration=1).
 
-# Lab #4 - Model Error Propagation and Uncertainty
+# Lab #4 - Model Error Propagation and Uncertainty (10/3/2019)
 ### Comparing ASTER and SRTM Data Quality in Amboró National Park, Bolivia
 During this week's lab, we learned how to develop batch scripts to run multiple SAGA tools through the command line in a single instance. The maps below show the NUM (number file) returns for both the SRTM and ASTER datasets in Amboró National Park in Bolivia. It's evident that the ASTER DEM has more consistent data quality than the SRTM DEM. In higher elevation areas of the park, the SRTM dataset makes use of ASTER granules to construct the terrain. Throughout almost the entire study area, the ASTER dataset constructs terrain using GDEM v3 (generally four to six scenes). The inconsistencies in the SRTM dataset are more common in mountainous regions, as evinced by a global assessment of SRTM conducted by Rodríguez, Morris, and Belz (2006).
 
