@@ -41,3 +41,11 @@ This map indicates the number of cells that contribute to the flow of water in a
 #### Channel Network
 ![Channel Network](https://marcovg.github.io/Lab3_ChannelNetwork.png)
 This map shows the stream networks in the area of Mt. Kilimanjaro. The output produces a vector and raster version, though this map only shows the vector output atop a hillshade (Azimuth=315, Heihgt=45, Exaggeration=1).
+
+# Lab #4 - Model Error Propagation and Uncertainty
+### Comparing ASTER and SRTM Data Quality in Amboró National Park, Bolivia
+During this week's lab, we learned how to develop batch scripts to run multiple SAGA tools through the command line in a single instance. The maps show the NUM (number file) returns for both the SRTM and ASTER datasets in Amboró National Park in Bolivia:
+
+#### SRTM NUM Return
+
+#### ASTER NUM Return
