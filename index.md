@@ -44,7 +44,12 @@ This map shows the stream networks in the area of Mt. Kilimanjaro. The output pr
 
 # Lab #4 - Model Error Propagation and Uncertainty
 ### Comparing ASTER and SRTM Data Quality in Amboró National Park, Bolivia
-During this week's lab, we learned how to develop batch scripts to run multiple SAGA tools through the command line in a single instance. The maps show the NUM (number file) returns for both the SRTM and ASTER datasets in Amboró National Park in Bolivia:
+During this week's lab, we learned how to develop batch scripts to run multiple SAGA tools through the command line in a single instance. The maps below show the NUM (number file) returns for both the SRTM and ASTER datasets in Amboró National Park in Bolivia. It's evident that the ASTER DEM has more consistent data quality than the SRTM DEM. In higher elevation areas of the park, the SRTM dataset makes use of ASTER granules to construct the terrain. Throughout almost the entire study area, the ASTER dataset constructs terrain using GDEM v3 (generally four to six scenes). The inconsistencies in the SRTM dataset are more common in mountainous regions, as evinced by a global assessment of SRTM conducted by Rodríguez, Morris, and Belz (2006).
+
+References:
+[**ASTER NUM Documentation**](https://lpdaac.usgs.gov/products/astgtmv003/)
+[**SRTM NUM Documentation**](https://lpdaac.usgs.gov/products/srtmgl1nv003/)
+[**Rodríguez, Morris, & Belz SRTM Assessment**](https://www.ingentaconnect.com/contentone/asprs/pers/2006/00000072/00000003/art00002?crawler=true&mimetype=application/pdf)
 
 #### SRTM NUM Return
 ![SRTM NUM Return](https://marcovg.github.io/srtm_num.png)
