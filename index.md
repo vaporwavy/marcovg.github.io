@@ -47,5 +47,6 @@ This map shows the stream networks in the area of Mt. Kilimanjaro. The output pr
 During this week's lab, we learned how to develop batch scripts to run multiple SAGA tools through the command line in a single instance. The maps show the NUM (number file) returns for both the SRTM and ASTER datasets in Amboró National Park in Bolivia:
 
 #### SRTM NUM Return
-
+![SRTM NUM Return](https://marcovg.github.io/srtm_num.png)
 #### ASTER NUM Return
+![ASTER NUM Return](https://marcovg.github.io/aster_num.png)
