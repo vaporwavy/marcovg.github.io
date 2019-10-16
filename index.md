@@ -58,3 +58,21 @@ References:
 ![SRTM NUM Return](https://marcovg.github.io/srtm_num.png)
 #### ASTER NUM Return
 ![ASTER NUM Return](https://marcovg.github.io/aster_num.png)
+
+The following maps compare the outputs at each step of the hydrological analysis between the ASTER and SRTM datasets (ASTER maps are placed above SRTM maps). These outputs were produced using batch scripts ([**ASTER**](https://marcovg.github.io/mosaic_asterhydro.bat), [**SRTM**](https://marcovg.github.io/mosaic_srtmhydro.bat)) running SAGA GIS 6.2 in the Windows Command Prompt:
+
+#### ASTER vs. SRTM - Analytical Hillshade
+![ASTER Hillshade](https://marcovg.github.io/Lab4_aster_analyticalhillshading.png)
+![SRTM Hillshade](https://marcovg.github.io/Lab4_srtm_analyticalhillshading.png)
+#### ASTER vs. SRTM - Sink Routes
+![ASTER Sink Routes](https://marcovg.github.io/Lab4_aster_sinkroute.png)
+![SRTM Sink Routes](https://marcovg.github.io/Lab4_srtm_sinkroute.png)
+#### ASTER vs. SRTM - Sink-Filled DEMs
+![ASTER Sink-Filled DEMs](https://marcovg.github.io/Lab4_aster_filledsinks.png)
+![SRTM Sink-Filled DEMs](https://marcovg.github.io/Lab4_srtm_filledsinks.png)
+#### ASTER vs. SRTM - Flow Accumulation
+![ASTER Flow Accumulation](https://marcovg.github.io/Lab4_aster_flowaccumulation.png)
+![SRTM Flow Accumulation](https://marcovg.github.io/Lab4_srtm_flowaccumulation.png)
+#### ASTER vs. SRTM - Channel Network
+![ASTER Channel Network](https://marcovg.github.io/Lab4_aster_channelnetwork.png)
+![SRTM Channel Network](https://marcovg.github.io/Lab4_srtm_channelnetwork.png)
