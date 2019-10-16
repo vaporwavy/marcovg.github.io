@@ -64,15 +64,24 @@ The following maps compare the outputs at each step of the hydrological analysis
 #### ASTER vs. SRTM - Analytical Hillshade
 ![ASTER Hillshade](https://marcovg.github.io/Lab4_aster_analyticalhillshading.png)
 ![SRTM Hillshade](https://marcovg.github.io/Lab4_srtm_analyticalhillshading.png)
+There is no discernible difference between the analytical hillshade outputs for ASTER and SRTM.
+
 #### ASTER vs. SRTM - Sink Routes
 ![ASTER Sink Routes](https://marcovg.github.io/Lab4_aster_sinkroute.png)
-![SRTM Sink Routes](https://marcovg.github.io/Lab4_srtm_sinkroute.png)
+![SRTM Sink Routes](https://marcovg.github.io/Lab4_srtm_sinkroute.png)'
+In the lower elevation areas outside of Amboró National Park, the sink route function return for the SRTM dataset indicates significant variability in flow direction for streams encountering sinks (particularly on the eastern edge of the study area). The ASTER dataset, on the other hand, does not show the same amount of sink route variability in that same region.
+
 #### ASTER vs. SRTM - Sink-Filled DEMs
 ![ASTER Sink-Filled DEMs](https://marcovg.github.io/Lab4_aster_filledsinks.png)
 ![SRTM Sink-Filled DEMs](https://marcovg.github.io/Lab4_srtm_filledsinks.png)
+As is generally the case, the differences between the sink-filled DEMs across the two datasets are minor and barely perceptible (unless being viewed at a larger scale, further zoomed in).
+
 #### ASTER vs. SRTM - Flow Accumulation
 ![ASTER Flow Accumulation](https://marcovg.github.io/Lab4_aster_flowaccumulation.png)
 ![SRTM Flow Accumulation](https://marcovg.github.io/Lab4_srtm_flowaccumulation.png)
+The two datasets generally agree on flow accumulation values; however, as was the case with the sink route output, there is a sparse number of cells on the eastern edge of the study region in the SRTM dataset.
+
 #### ASTER vs. SRTM - Channel Network
 ![ASTER Channel Network](https://marcovg.github.io/Lab4_aster_channelnetwork.png)
 ![SRTM Channel Network](https://marcovg.github.io/Lab4_srtm_channelnetwork.png)
+The most noticable difference between the two datasets is evident in this map, where the SRTM fails to capture channel networks on the eastern edge of the study region.
