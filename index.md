@@ -85,3 +85,7 @@ The two datasets generally agree on flow accumulation values; however, as was th
 ![ASTER Channel Network](https://marcovg.github.io/Lab4_aster_channelnetwork.png)
 ![SRTM Channel Network](https://marcovg.github.io/Lab4_srtm_channelnetwork.png)
 The most noticable difference between the two datasets is evident in this map, where the SRTM fails to capture channel networks on the eastern edge of the study region.
+
+# Lab #6 - Resilience Academy in Dar es Salaam (10/24/2019)
+### Informal Settlement Detection using OpenStreetMap Data
+This week, we pulled data into our PostGIS servers from [**OpenStreetMap**](https://www.openstreetmap.org/) and [**Resilience Academy**](https://resilienceacademy.ac.tz/) to assess the presence of informal settlements in Dar es Salaam, Tanzania: [**Leaflet Map**](https://marcovg.github.io/dsmmap/index.html)
