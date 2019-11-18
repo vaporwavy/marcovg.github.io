@@ -89,3 +89,6 @@ The most noticable difference between the two datasets is evident in this map, w
 # Lab #6 - Resilience Academy in Dar es Salaam (10/24/2019)
 ### Informal Settlement Detection using OpenStreetMap Data
 This week, we pulled data into our PostGIS servers from [**OpenStreetMap**](https://www.openstreetmap.org/) and [**Resilience Academy**](https://resilienceacademy.ac.tz/) to assess the presence of informal settlements in Dar es Salaam, Tanzania. The following map shows the number of schools per subward in the city: [**Leaflet Map**](https://marcovg.github.io/dsmmap/index.html)
+
+# GIS Twitter Data Article (10/18/2019)
+### Gu, Qian, and Chen: [**From Twitter to detector: Real-time traffic incident detection using social media data**](https://doi.org/10.1016/j.trc.2016.02.011)
