@@ -91,7 +91,9 @@ The most noticable difference between the two datasets is evident in this map, w
 For this lab, [**Sarah Haedrich**](https://sarahhaedrich.github.io/) and I made use of openly available data from [**OpenStreetMap**](https://www.openstreetmap.org/#map=11/-6.8163/39.1601) and [Resilience Academy](https://resilienceacademy.ac.tz/) to map the number of schools in each subward of Dar es Salaam, Tanzania. Our research sought to answer the following question: **where is there uneven access to educational resources in Dar es Salaam?** Visualizing these data could also help with identifying the presence of informal settlements within the city. Since the OpenStreetMap project allows contributors to create features using any tag or data type, one of our challenges was to account for schools listed both as points and polygons. We also formulated a method for handling duplicate and blank records, as described below (the SQL code used to manipulate the data within our PostGIS database can be found [**here**](https://marcovg.github.io/DSMSchools.sql)):
 
 We first made use of a batch script (created by Prof. Joe Holler) that converted files from [**Planet OSM**](https://planet.openstreetmap.org/) into shapefiles that we could upload to our PostGIS database. To select the data we would analyze, we filtered to only include nodes and polygons where amenity="school" (that is, records in the point layer and polygon layer where the variable "amenity" had the value "school"). To identify duplicate schools, we wrote code that identified school polygons that intersected school points (i.e. where amenity="school" was a tag-value combo in both the point and polygon):
-```-- Select all points and polygons representing schools (where amenity="school")
+
+```sql
+-- Select all points and polygons representing schools (where amenity="school")
 ALTER TABLE planet_osm_polygon ADD COLUMN intersectsPoint Interger
 UPDATE planet_osm_polygon
 SET intersectsPoint = 1
@@ -103,14 +105,16 @@ SELECT * FROM planet_osm_polygon WHERE intersectsPoint = 1
 ```
 
 For school polygons without intersecting school points, we wanted to include these in the analysis as well. To do this, we converted the polygons into centroids (also projecting the polygon to match the CRS of the point data):
-```-- Create centroids of school polygons intersecting points
+```sql
+-- Create centroids of school polygons intersecting points
 SELECT osm_id, name, amenity, st_centroid(st_transform(way, 32727)), intersectsPoint
 FROM planet_osm_polygon
 WHERE amenity = 'school' and intersectpoint is NULL
 ```
 
 We then merged (using UNION) the centroids of the school polygons with the school points (effectively adding additional records to the school points layer, in a new layer called "mergedSchools"):
-```CREATE TABLE mergedSchools AS
+```sql
+CREATE TABLE mergedSchools AS
 SELECT osm_id, amenity, st_centroid FROM pointlessSchools2
 UNION
 SELECT osm_id, amenity, st_transform(way, 32727) FROM planet_osm_point
@@ -118,21 +122,24 @@ WHERE amenity = 'school'
 ```
 
 At this point, we noticed that some of the schools in the "mergedSchools" layer have duplicate or blank names (the latter usually being the result of school buildings already atop school boundary areas). To merge duplicate schools, we first chose to filter out schools without any names (to avoid merging all schools with blank names):
-```-- Filtering out schools with blank names.
+```sql
+-- Filtering out schools with blank names.
 CREATE TABLE nonBlank_Schools AS
 SELECT * FROM mergedSchools
 WHERE name <> ""
 ```
 
 After filtering out the blanks, we eliminated duplicate records (those with the same name) by identifying the centroid of the union of the duplicates (mid-point between each duplicate school point). The names were trimmed and converted to upper-case to account for any whitespace or uppercase/lowercase mismatching:
-```-- Group by school name (for schools with duplicate names).
+```sql
+-- Group by school name (for schools with duplicate names).
 CREATE TABLE groupedSchools AS
 SELECT st_centroid(st_union(st_centroid)), trim(upper(name)) FROM nonBlank_Schools
 GROUP BY trim(upper(name))
 ```
 
 We then brought the blank schools back into the dataset:
-```-- To avoid merging all schools with blank names, blank-named schools are added in after merging duplicates.
+```sql
+-- To avoid merging all schools with blank names, blank-named schools are added in after merging duplicates.
 CREATE TABLE remergedSchools AS
 SELECT btrim AS name, st_centroid as geom FROM groupedSchools
 UNION
@@ -140,7 +147,8 @@ SELECT name, st_centroid as geom FROM blankschools
 ```
 
 Our next step involved counting the number of schools in each ward. In a new column, we assigned to each school the "fid" of the subward in which it is located:
-```-- Create new column for schools containing the ward the school is in.
+```sql
+-- Create new column for schools containing the ward the school is in.
 UPDATE remergedSchools
 SET ward = subwards.fid
 FROM subwards
@@ -148,7 +156,8 @@ WHERE st_intersects(remergedSchools.geom, st_transform(subwards.geom, 32727))
 ```
 
 Finally, the last step was to count the number of schools in each ward as follows:
-```-- Summing up the number of schools in each ward.
+```sql
+-- Summing up the number of schools in each ward.
 CREATE TABLE schoolWard as
 SELECT ward, count(*) as schoolCount FROM remergedSchools
 GROUP BY ward
