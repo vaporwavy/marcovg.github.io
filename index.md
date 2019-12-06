@@ -114,6 +114,7 @@ WHERE amenity = 'school' and intersectpoint is NULL
 
 We then merged (using UNION) the centroids of the school polygons with the school points (effectively adding additional records to the school points layer, in a new layer called "mergedSchools"):
 ```sql
+-- Combine (union) school polygon centroids with school points (and convert to UTM 27S projection)
 CREATE TABLE mergedSchools AS
 SELECT osm_id, amenity, st_centroid FROM pointlessSchools2
 UNION
