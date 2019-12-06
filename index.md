@@ -164,7 +164,7 @@ SELECT ward, count(*) as schoolCount FROM remergedSchools
 GROUP BY ward
 ```
 
-The final map can be found [**here**]. It's immediately evident that subwards on the periphery of the city (in the northwest, southeast, and southwest) lack proximity to schools. Not until moving closer to the city center does the concentration of schools increase (though certain wards in the city center also lack proximity to schools). These data indicate that access to education is spatially uneven in Dar es Salaam.
+The final map can be found [**here**](https://marcovg.github.io/dsmmap). It's immediately evident that subwards on the periphery of the city (in the northwest, southeast, and southwest) lack proximity to schools. Not until moving closer to the city center does the concentration of schools increase (though certain wards in the city center also lack proximity to schools). These data indicate that access to education is spatially uneven in Dar es Salaam.
 
 # GIS Twitter Data Article (10/18/2019)
 ### Gu, Qian, and Chen: [**From Twitter to detector: Real-time traffic incident detection using social media data**](https://doi.org/10.1016/j.trc.2016.02.011)
