@@ -171,7 +171,7 @@ The final map can be found [**here**](https://marcovg.github.io/dsmmap). It's im
 In this article, the authors discuss how they use Twitter data to map traffic incidents in the Philadelphia and Pittsburgh metro areas. Arguing that sensor coverage is "sparse" and reporting to emergency response systems is "labor-intensive," the authors pursue an inductive research approach that takes advantage of data from Twitter's REST API, using natural language processing (NLP) algorithms. The authors use the following keywords to fetch tweets: "traffic, accident, road, avenue, car, bike, truck, driver, injured, congestion, slow, I-, PA-, US-, exit, mile, stop, -crazy, -hate, -!" where keywords with the "-" in front are keywords they want to exclude from the query. The research isn't reproducible, since running their query wouldn't get the same sample of tweets at a different point in time (the date the query was run isn't provided). However, the research is replicable in that they provide a detailed explanation of how they handled keywords using NLP techniques. R packages that could be used include rTweet, nlp, and wordnet (used to grab synonyms of the initial "seed words").
 
 # Labs #7 & #8 - Investigating Malawi Vulnerability with GIS Models (10/31/2019 & 11/7/2019)
-### Reproducing Malcolm et al.'s Multi-Criteria Vulnerability Analysis
+### Reproducing Malcolmb et al.'s (2014) Multi-Criteria Vulnerability Analysis
 
 # Lab #9 - Twitter Data Analysis with RStudio, PostGIS, and QGIS (11/14/2019)
 ### Twitter Analysis of Impeachment Proceedings
