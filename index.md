@@ -173,8 +173,13 @@ In this article, the authors discuss how they use Twitter data to map traffic in
 # Labs #7 & #8 - Investigating Malawi Vulnerability with GIS Models (10/31/2019 & 11/7/2019)
 ### Reproducing Malcolmb et al.'s (2014) Multi-Criteria Vulnerability Analysis
 
+Reference:
+
+• Malcomb, D. W., E. A. Weaver, and A. R. Krakowka. 2014. Vulnerability modeling for sub-Saharan Africa: An
+operationalized approach in Malawi. *Applied Geography* 48:17–30.
+
 # Lab #9 - Twitter Data Analysis with RStudio, PostGIS, and QGIS (11/14/2019)
 ### Twitter Analysis of Impeachment Proceedings
 
-# Lab #10 - Analyzing Twittersphere Activity during Hurricane Dorian (11/21/2019)
-### Spatial Hotspot Analysis: Hurricane Dorian vs. Baseline Twitter Activity for November
+# Lab #10 - Analyzing Twitter Activity during Hurricane Dorian (11/21/2019)
+### Spatial Hotspot Analysis: Hurricane Dorian vs. Baseline Twitter Activity during November
