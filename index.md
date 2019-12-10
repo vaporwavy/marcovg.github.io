@@ -183,3 +183,5 @@ operationalized approach in Malawi. *Applied Geography* 48:17–30.
 
 # Lab #10 - Analyzing Twitter Activity during Hurricane Dorian (11/21/2019)
 ### Spatial Hotspot Analysis: Hurricane Dorian vs. Baseline Twitter Activity during November
+
+# Final Project - Twitter Sentiment Analysis of Winter in the Midwest (December 2019)
