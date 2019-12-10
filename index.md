@@ -166,6 +166,15 @@ GROUP BY ward
 
 The final map can be found [**here**](https://marcovg.github.io/dsmmap). It's immediately evident that subwards on the periphery of the city (in the northwest, southeast, and southwest) lack proximity to schools. Not until moving closer to the city center does the concentration of schools increase (though certain wards in the city center also lack proximity to schools). These data indicate that access to education is spatially uneven in Dar es Salaam.
 
-# GIS Twitter Data Article (10/18/2019)
+# GIS Twitter Data Article (11/18/2019)
 ### Gu, Qian, and Chen: [**From Twitter to detector: Real-time traffic incident detection using social media data**](https://doi.org/10.1016/j.trc.2016.02.011)
 In this article, the authors discuss how they use Twitter data to map traffic incidents in the Philadelphia and Pittsburgh metro areas. Arguing that sensor coverage is "sparse" and reporting to emergency response systems is "labor-intensive," the authors pursue an inductive research approach that takes advantage of data from Twitter's REST API, using natural language processing (NLP) algorithms. The authors use the following keywords to fetch tweets: "traffic, accident, road, avenue, car, bike, truck, driver, injured, congestion, slow, I-, PA-, US-, exit, mile, stop, -crazy, -hate, -!" where keywords with the "-" in front are keywords they want to exclude from the query. The research isn't reproducible, since running their query wouldn't get the same sample of tweets at a different point in time (the date the query was run isn't provided). However, the research is replicable in that they provide a detailed explanation of how they handled keywords using NLP techniques. R packages that could be used include rTweet, nlp, and wordnet (used to grab synonyms of the initial "seed words").
+
+# Labs #7 & #8 - Investigating Malawi Vulnerability with GIS Models (10/31/2019 & 11/7/2019)
+### Reproducing Malcolm et al.'s Multi-Criteria Vulnerability Analysis
+
+# Lab #9 - Twitter Data Analysis with RStudio, PostGIS, and QGIS (11/14/2019)
+### Twitter Analysis of Impeachment Proceedings
+
+# Lab #10 - Analyzing Twittersphere Activity during Hurricane Dorian (11/21/2019)
+### Spatial Hotspot Analysis: Hurricane Dorian vs. Baseline Twitter Activity for November
