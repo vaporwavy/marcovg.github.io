@@ -40,7 +40,7 @@ This map constructs a new elevation model that reflects a scenario in which terr
 This map indicates the number of cells that contribute to the flow of water in a given cell (e.g. value of 1 means no cells contribute, while a value of 100 means 99 other cells contribute). This allows us to identify streams.
 #### Channel Network
 ![Channel Network](https://marcovg.github.io/Lab3_ChannelNetwork.png)
-This map shows the stream networks in the area of Mt. Kilimanjaro. The output produces a vector and raster version, though this map only shows the vector output atop a hillshade (Azimuth=315, Heihgt=45, Exaggeration=1).
+This map shows the stream networks in the area of Mt. Kilimanjaro. The output produces a vector and raster version, though this map only shows the vector output atop a hillshade (Azimuth=315, Height=45, Exaggeration=1).
 
 # Lab #4 - Model Error Propagation and Uncertainty (10/3/2019)
 ### Comparing ASTER and SRTM Data Quality in Amboró National Park, Bolivia
